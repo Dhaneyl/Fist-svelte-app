@@ -12,11 +12,10 @@
 
 <h1>Hello {name}!</h1>
 <p class="p">Hope you are having a nice day</p>
-<button on:click={()=>{name = ''}}>
-    Click me if you dare
-</button>
+
 <input type="text" placeholder="write your name" 
 class="text" on:keyup={handle}/>
+<button disabled={!name.length > 0}>Send message</button>
 <p>Your name have {name.length} characters</p>
 <!-- Los eventos en svelte inician con dos puntos ej on:click -->
 
